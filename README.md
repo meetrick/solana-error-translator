@@ -116,7 +116,17 @@ npm install
 
 ## Running the Application
 
-You will need **two terminal windows** open at the same time.
+### Option A — One-step (macOS / Linux)
+
+```bash
+# From the project root
+./start.sh
+```
+
+This launches both the backend and frontend in a single terminal.
+Press **Ctrl+C** to stop both servers at once.
+
+### Option B — Manual (two terminal windows)
 
 ### Terminal 1 — Start the Backend
 
