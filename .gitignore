@@ -1,0 +1,38 @@
+# ── Python ──────────────────────────────────────────────
+backend/venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# ── Environment variables ────────────────────────────────
+.env
+# .env.example is intentionally committed as a template
+
+# ── Next.js / Node ──────────────────────────────────────
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.pnp
+frontend/.pnp.*
+frontend/coverage/
+
+# ── macOS ────────────────────────────────────────────────
+.DS_Store
+
+# ── Claude Code local settings ───────────────────────────
+.claude/
+
+# ── Dev prompts (internal) ───────────────────────────────
+prompt_*.md
+
+# ── Logs ─────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── TypeScript ───────────────────────────────────────────
+*.tsbuildinfo
+frontend/next-env.d.ts

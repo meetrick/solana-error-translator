@@ -1,0 +1,152 @@
+{
+  "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA": {
+    "name": "SPL Token Program",
+    "errors": {
+      "0x0": {
+        "name": "NotRentExempt",
+        "message": "The account's lamport balance is below the rent-exempt minimum. Add more SOL to this account so it meets the rent-exempt threshold."
+      },
+      "0x1": {
+        "name": "InsufficientFunds",
+        "message": "The token account does not have enough tokens to complete this operation. Check your token balance and try again."
+      },
+      "0x2": {
+        "name": "InvalidMint",
+        "message": "The mint address provided is not valid. Ensure you are using the correct token mint for this operation."
+      },
+      "0x3": {
+        "name": "MintMismatch",
+        "message": "The token account is not associated with the specified mint. The source and destination accounts must hold the same token type."
+      },
+      "0x4": {
+        "name": "OwnerMismatch",
+        "message": "The signing authority does not match the account's owner. Only the account owner can authorize this transaction."
+      },
+      "0x5": {
+        "name": "FixedSupply",
+        "message": "This token's supply is fixed and new tokens cannot be minted. The mint authority has been disabled."
+      },
+      "0x6": {
+        "name": "AlreadyInUse",
+        "message": "This account has already been initialized and cannot be initialized again."
+      },
+      "0x7": {
+        "name": "InvalidNumberOfProvidedSigners",
+        "message": "The number of signers provided does not match what the instruction requires."
+      },
+      "0x8": {
+        "name": "InvalidNumberOfRequiredSigners",
+        "message": "The number of required signers specified in the account is invalid."
+      },
+      "0x9": {
+        "name": "UninitializedState",
+        "message": "The token account has not been initialized. Create and initialize the account before using it."
+      },
+      "0xa": {
+        "name": "NativeNotSupported",
+        "message": "This instruction does not support native SOL token accounts (wrapped SOL)."
+      },
+      "0xb": {
+        "name": "NonNativeHasBalance",
+        "message": "A non-native token account can only be closed if its token balance is zero. Transfer or burn all tokens first."
+      },
+      "0xc": {
+        "name": "InvalidInstruction",
+        "message": "The instruction data is malformed or contains an unrecognized instruction type."
+      },
+      "0xd": {
+        "name": "InvalidState",
+        "message": "The account is in an invalid state for the requested operation (e.g., attempting to thaw an account that is not frozen)."
+      },
+      "0xe": {
+        "name": "Overflow",
+        "message": "An arithmetic overflow occurred during the operation. The resulting token amount exceeds the maximum allowed value."
+      },
+      "0xf": {
+        "name": "AuthorityTypeNotSupported",
+        "message": "The authority type specified is not supported for this account. Check that you are using the correct authority (e.g., MintTokens, FreezeAccount)."
+      },
+      "0x10": {
+        "name": "MintCannotFreeze",
+        "message": "This token mint has no freeze authority set, so its accounts cannot be frozen or thawed."
+      },
+      "0x11": {
+        "name": "AccountFrozen",
+        "message": "This token account is frozen. All transfers and operations are suspended until the freeze authority thaws the account."
+      },
+      "0x12": {
+        "name": "MintDecimalsMismatch",
+        "message": "The decimal precision specified in the instruction does not match the mint's actual decimal setting."
+      },
+      "0x13": {
+        "name": "NonNativeNotSupported",
+        "message": "This instruction only supports native SOL (wrapped SOL) token accounts, not regular SPL token accounts."
+      }
+    }
+  },
+  "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s": {
+    "name": "Metaplex Token Metadata Program",
+    "errors": {
+      "0x0": {
+        "name": "InstructionUnpackError",
+        "message": "Failed to deserialize the instruction data. The transaction may have been built with an incompatible version of the Metaplex SDK."
+      },
+      "0x1": {
+        "name": "InstructionPackError",
+        "message": "Failed to serialize the instruction data when building the transaction."
+      },
+      "0x2": {
+        "name": "NotRentExempt",
+        "message": "The metadata account's lamport balance is below the rent-exempt minimum. Fund the account with enough SOL before proceeding."
+      },
+      "0x3": {
+        "name": "AlreadyInitialized",
+        "message": "This metadata account has already been created and initialized for the given mint. You cannot create it a second time."
+      },
+      "0x4": {
+        "name": "Uninitialized",
+        "message": "The metadata account has not been initialized yet. Create the metadata account before trying to update or use it."
+      },
+      "0x5": {
+        "name": "InvalidMetadataKey",
+        "message": "The provided metadata account address is incorrect. The metadata PDA must be derived from the correct mint address."
+      },
+      "0x6": {
+        "name": "InvalidUpdateAuthorityKey",
+        "message": "The update authority address does not match the one stored in the metadata account."
+      },
+      "0x7": {
+        "name": "UpdateAuthorityIsNotSigner",
+        "message": "The update authority must sign this transaction but did not. Ensure the update authority wallet has signed the transaction."
+      },
+      "0x8": {
+        "name": "UseAuthorityRecordAlreadyExists",
+        "message": "A use authority record already exists for this account. You cannot create a duplicate use authority."
+      },
+      "0x9": {
+        "name": "UseAuthorityRecordAlreadyRevoked",
+        "message": "The use authority record has already been revoked and can no longer be used to approve operations."
+      },
+      "0xa": {
+        "name": "Tombstone",
+        "message": "This use authority has been tombstoned (permanently disabled) and cannot be used or reinstated."
+      },
+      "0x1f": {
+        "name": "InvalidMasterEdition",
+        "message": "The master edition account provided is invalid or does not match the expected PDA for this mint."
+      },
+      "0x20": {
+        "name": "MasterEditionAddMintDecimalsMismatch",
+        "message": "A master edition NFT must use a mint with 0 decimal places and a supply of 1."
+      },
+      "0x3e": {
+        "name": "NotEnoughTokens",
+        "message": "The wallet does not hold enough tokens to perform this operation. For NFTs, a balance of exactly 1 token is required."
+      },
+      "0x46": {
+        "name": "CreatorNotFound",
+        "message": "The specified creator address was not found in the metadata's creator array. Verify the creator list on the NFT."
+      }
+    }
+  }
+}
